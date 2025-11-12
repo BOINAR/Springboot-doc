@@ -158,3 +158,46 @@ public User create(@RequestBody User user) {}
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+```
+
+### Exemple avec annotations
+```java
+public class UserDTO {
+    @NotBlank
+    private String name;
+
+    @Email
+    private String email;
+
+    @Min(18)
+    private int age;
+}
+```
+
+### Utilisation dans un contrôleur
+```java
+@PostMapping
+public User create(@Valid @RequestBody UserDTO dto) {}
+```
+
+---
+
+## 7. Annotations de configuration
+
+### `@Bean`
+```java
+@Bean
+public PasswordEncoder encoder() {
+    return new BCryptPasswordEncoder();
+}
+```
+
+### Tâches planifiées
+```java
+@EnableScheduling
+public class Config {}
+
+@Scheduled(fixedRate = 60000)
+public void run() {}
