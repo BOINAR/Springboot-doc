@@ -295,7 +295,24 @@ public void run() {}
 
 ---
 
-# 🏁 Conclusion
+## relation
+exemple de relation dans le model
+
+```java
+@ManyToOne(optional = false)
+@JoinColumn(name = "user_id")
+private User user;
+```
+
+---
+
+## Enumération
+exemple d'enumération
+
+```java
+@Enumerated(EnumType.STRING)
+private AuthProvider provider;
+```🏁 Conclusion
 Tu as maintenant un fichier :
 
 ✔ Très bien structuré  
