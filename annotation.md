@@ -312,7 +312,9 @@ exemple d'enumération
 ```java
 @Enumerated(EnumType.STRING)
 private AuthProvider provider;
-```🏁 Conclusion
+```
+
+🏁 Conclusion
 Tu as maintenant un fichier :
 
 ✔ Très bien structuré  
